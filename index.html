@@ -2,64 +2,75 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My CV</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dario Kavalkeviski — Desenvolvedor Frontend</title>
+  <meta name="description" content="Currículo online de Dario Kavalkeviski — desenvolvedor frontend. HTML, CSS, JavaScript e projetos pessoais." />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Dario Kavalkeviski — Desenvolvedor Frontend" />
+  <meta property="og:description" content="Currículo online de Dario Kavalkeviski — HTML, CSS, JavaScript e projetos pessoais." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dariokavalkeviski.github.io/my-cv/" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/dariokavalkeviski/my-cv/main/images/avatar.png" />
+
+  <link rel="icon" href="images/favicon.ico" />
+
   <link rel="stylesheet" media="screen" href="style.css">
-  <script src="https://kit.fontawesome.com/4ba85c3ec6.js" crossorigin="anonymous"></script>
+  <!-- Carrega o kit de ícones de forma não bloqueante -->
+  <script defer src="https://kit.fontawesome.com/4ba85c3ec6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
   <div class="container">
-    <div class="information-column">
-      <img src="images/avatar.png" alt="foto de Dario, home loiro sério">
+    <aside class="information-column" aria-label="Informações pessoais">
+      <img src="images/avatar.png" alt="Foto de Dario Kavalkeviski" loading="lazy" width="240" height="240">
       <h1>Dario Kavalkeviski</h1>
       <h2>Desenvolvedor Frontend</h2>
       <hr>
+
       <div class="contact-description">
         <h3>Contato</h3>
         <ul>
           <li>
-            <i class="fa-solid fa-envelope"></i>
-            <a href="mailto:sdariok@gmail.com" target="blank">E-Mail</a>
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <a href="mailto:sdariok@gmail.com">sdariok@gmail.com</a>
           </li>
           <li>
-            <a class="social-icon icon-fab" href="https://api.whatsapp.com/send?phone=5542999823044" target="_blank"><i
-                class="fab fa-whatsapp"></i>WhatsApp</a>
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <a class="social-icon icon-fab" href="https://api.whatsapp.com/send?phone=5542999823044" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           </li>
           <li>
-            <i class="fa-brands fa-github"></i>
-            <a href="https://github.com/dariokavalkeviski" target="blank">Github</a>
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            <a href="https://github.com/dariokavalkeviski" target="_blank" rel="noopener noreferrer">GitHub</a>
           </li>
           <li>
-            <i class="fa-brands fa-linkedin"></i>
-            <a href="https://www.linkedin.com/in/dario-kavalkeviski" target="blank">Linkedin</a>
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            <a href="https://www.linkedin.com/in/dario-kavalkeviski" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </li>
           <li>
-            <i class="fa-solid fa-globe"></i>
-            <a href="https://www.google.com/maps/place/Ponta+Grossa,+PR/@-25.1386796,-50.2414114,12z/data=!3m1!4b1!4m6!3m5!1s0x94e81ac65f102321:0xacb0f4e64629b2f1!8m2!3d-25.0995752!4d-50.1583959!16s%2Fg%2F1ymwz62yp?entry=ttu"
-              target="_blank">Ponta Grossa, PR</a>
+            <i class="fa-solid fa-globe" aria-hidden="true"></i>
+            <a href="https://www.google.com/maps/place/Ponta+Grossa,+PR/@-25.0995752,-50.1583959,12z" target="_blank" rel="noopener noreferrer">Ponta Grossa, PR</a>
           </li>
         </ul>
-
       </div>
+
       <div class="education-description">
         <h3>Educação</h3>
         <ul>
           <li>
-            <p>2023</p>
-            <h5>Cursando Análise e Desenvolvimento de Sistemas</h5>
-            <h5>UniCesumar</h5>
+            <p><time datetime="2023">2023</time></p>
+            <h4>Cursando Análise e Desenvolvimento de Sistemas — UniCesumar</h4>
           </li>
           <li>
-            <p>2023</p>
-            <h5>StepOne - Desenvolvimento Frontend</h5>
-            <a href="https://www.youtube.com/@AdrianaSaty/featured" target="_blank">
-              <h5>Adriana Saty</h5>
-            </a>
+            <p><time datetime="2023">2023</time></p>
+            <h4>StepOne - Desenvolvimento Frontend</h4>
+            <p><a href="https://www.youtube.com/@AdrianaSaty/featured" target="_blank" rel="noopener noreferrer">Canal Adriana Saty</a></p>
           </li>
         </ul>
       </div>
+
       <div class="language-description">
         <h3>Línguas</h3>
         <ul>
@@ -84,42 +95,40 @@
         </ul>
 
       </div>
-    </div>
-    <div class="experiences-column">
-      <section>
-        <h2>Sobre</h2>
+    </aside>
+
+    <main id="main" class="experiences-column">
+      <section aria-labelledby="sobre">
+        <h2 id="sobre">Sobre</h2>
         <p>
-          Recentemente fiz transição de carreira e atualmente sou estudante de programação <strong>Frontend e
-            Backend</strong>, onde pretendo
-          trabalhar
-          como freelancer
-          ou CLT. Meu principal objetivo é compreender as necessidades dos usuários
-          e da empresa, com o intuito de projetar e implementar sistemas de
-          informação eficientes que atendam às necessidades do negócio. Minhas especialidades incluem HTML, CSS,
-          Javascript, Bootstrap e React e desenvolvimento de websites
-          responsivos.
+          Recentemente fiz transição de carreira e atualmente sou estudante de programação <strong>Frontend e Backend</strong>,
+          com interesse em atuar como freelancer ou CLT. Meu principal objetivo é compreender as necessidades dos usuários
+          e da empresa para projetar e implementar sistemas de informação eficientes. Minhas especialidades incluem HTML, CSS,
+          JavaScript, Bootstrap e React, com foco em desenvolvimento de websites responsivos.
         </p>
       </section>
-      <section>
-        <h2>Experiências</h2>
+
+      <section aria-labelledby="experiencias">
+        <h2 id="experiencias">Experiências</h2>
+
         <div class="experience">
           <div class="experience-date">
-            <p>1995 - 2022</p>
+            <p><time datetime="1995-01">1995 - 2022</time></p>
             <p>(27 anos)</p>
           </div>
           <div>
             <h3>PMPR</h3>
             <h4>Policial Militar</h4>
             <p>
-              Instituição onde desempenhei várias funções em prol do bem estar e da segurança da
-              população paranaense, atualmente na Reserva
-              Remunerada e fazendo transição de carreira para continuar sendo útil e mostrar meus conhecimentos.
+              Instituição onde desempenhei várias funções em prol do bem estar e da segurança da população paranaense. Atualmente
+              estou na Reserva Remunerada e em transição de carreira, buscando aplicar meus conhecimentos em tecnologia.
             </p>
           </div>
         </div>
+
         <div class="experience">
           <div class="experience-date">
-            <p>2009 - 2012</p>
+            <p><time datetime="2009">2009 - 2012</time></p>
             <p>(3 anos)</p>
           </div>
           <div>
@@ -127,30 +136,42 @@
             <h4>Piloto Comercial de Avião</h4>
             <p>
               Concluí os cursos de Piloto Privado e Comercial no Aeroclube de Ponta Grossa (Código ANAC: 137458). Recebi
-              uma formação sólida e profissional, adquirindo as habilidades necessárias para operar aeronaves com
-              competência e segurança.
+              formação sólida e adquiri habilidades para operar aeronaves com competência e segurança.
             </p>
           </div>
         </div>
       </section>
-      <section>
-        <h2>Projetos</h2>
-        <h3>My links</h3>
-        <p>
-          Site para centralizar os links mais importantes em um só lugar. Desenvolvido com HTML e CSS no curso
-          <strong>StepOne</strong>. Confira o resultado <a
-            href=" https://dariokavalkeviski.github.io/my-links/">aqui</a> aqui e o código
-          fonte <a href="https://github.com/dariokavalkeviski/my-links">aqui</a>.
-        </p>
-        <h3>My CV</h3>
-        <p>
-          Site com o currículo online. Desenvolvido com HTML e CSS no curso <strong>StepOne</strong>. Confira o
-          código fonte <a href="https://github.com/dariokavalkeviski/my-cv">aqui</a>.
-        </p>
+
+      <section aria-labelledby="projetos">
+        <h2 id="projetos">Projetos</h2>
+        <article>
+          <h3>My Links</h3>
+          <p>
+            Site para centralizar os links mais importantes. Desenvolvido com HTML e CSS no curso <strong>StepOne</strong>.
+            Veja o site: <a href="https://dariokavalkeviski.github.io/my-links/" target="_blank" rel="noopener noreferrer">my-links</a>
+            e o código: <a href="https://github.com/dariokavalkeviski/my-links" target="_blank" rel="noopener noreferrer">GitHub</a>.
+          </p>
+        </article>
+        <article>
+          <h3>My CV</h3>
+          <p>
+            Site com o currículo online. Desenvolvido com HTML e CSS no curso <strong>StepOne</strong>. Código fonte em
+            <a href="https://github.com/dariokavalkeviski/my-cv" target="_blank" rel="noopener noreferrer">GitHub</a>.
+          </p>
+        </article>
       </section>
-      <p class="last-date">Última atualização: 05/07/2023</p>
-    </div>
+
+      <footer>
+        <p class="last-date">Última atualização: <time datetime="2023-07-05">05/07/2023</time></p>
+      </footer>
+    </main>
   </div>
+
+  <!-- Structured data (Person) -->
+  <script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "Person", "name": "Dario Kavalkeviski", "jobTitle": "Desenvolvedor Frontend", "url": "https://dariokavalkeviski.github.io/my-cv/", "sameAs": ["https://github.com/dariokavalkeviski", "https://www.linkedin.com/in/dario-kavalkeviski"]}
+  </script>
+
 </body>
 
 </html>
